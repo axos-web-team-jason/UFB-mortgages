@@ -1,0 +1,21 @@
+.twoUpHeader {
+  color: var(--ufb-light);
+}
+
+.mainContentHeader {
+  color: var(--ufb-dark);
+}
+
+.sectionBody {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 681px;
+  margin: 0 auto 1rem;
+}
+@media (max-width: 768px) {
+  .sectionBody {
+    width: auto;
+    padding: 0 20px;
+  }
+}
