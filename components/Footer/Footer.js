@@ -20,6 +20,11 @@ export default function Footer({ ...data }) {
     }
   };
 
+  const printYear = () => {
+    let year = new Date().getFullYear().toString() + "";
+    return year;
+  };
+
   const EHLLoader = () => {
     return `https://www.ufbdirect.com/Assets/EHL-Logo.svg`;
   };
@@ -32,7 +37,7 @@ export default function Footer({ ...data }) {
     <div>
       <footer className={`${styles.section}`}>
         <div className="utils-container">
-          <p>{pageConstants.footer.copyright}</p>
+          <p>{`© ${printYear()} ${pageConstants.footer.copyright}`}</p>
           <p>{pageConstants.footer.fdic}</p>
           <p>{pageConstants.footer.nmls}</p>
           {printDisclosures(info)}
