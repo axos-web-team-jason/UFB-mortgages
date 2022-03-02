@@ -60,7 +60,6 @@ h1 {
 
 .grayBg {
   background-color: #60707a;
-  /* margin-top: 3rem; */
 }
 
 .darkText {
@@ -77,7 +76,7 @@ h1 {
   }
 }
 
-/* Articles and Tools Slider*/
+/* Articles and Tools Slider */
 .slick-slider .slick-list,
 .slick-slider .slick-track,
 .slick-initialized .slick-slide {

@@ -8,7 +8,9 @@ export default function HeroBanner({ ...data }) {
     <div id="__next" data-reactroot="">
       <section className={`${styles.Hero_bannerHero}`}>
         <div className={`${styles.utils_container}`}>
-          <div className={`${styles.utils_flexRow} ${styles.utils_middle}`}>
+          <div
+            className={`${styles.utils_flexRow} ${styles.utils_middle} ${styles.Hero_gutter} ${styles.Hero_shift}`}
+          >
             <div className={`${styles.Hero_textWrapper}`}>
               <div className={`${styles.Hero_superTag}`}>
                 {heroBanner.superHeader}
