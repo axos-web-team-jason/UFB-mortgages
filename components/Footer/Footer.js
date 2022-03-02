@@ -21,11 +21,11 @@ export default function Footer({ ...data }) {
   };
 
   const EHLLoader = () => {
-    return `http://ufbsitecore.uat.ufbdirect.com/Assets/EHL-Logo.svg`;
+    return `https://www.ufbdirect.com/Assets/EHL-Logo.svg`;
   };
 
   const FDICLoader = () => {
-    return `http://ufbsitecore.uat.ufbdirect.com/Assets/FDIC-Logo.svg`;
+    return `https://www.ufbdirect.com/Assets/FDIC-Logo.svg`;
   };
 
   return (

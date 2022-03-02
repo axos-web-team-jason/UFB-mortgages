@@ -9,8 +9,13 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 * {
@@ -28,12 +33,6 @@ a {
   --ufb-text: #323339;
   --ufb-btn-bg: #e18357;
   --ufb-white: #ffffff;
-}
-
-a:hover,
-button:hover {
-  opacity: 0.8;
-  cursor: pointer;
 }
 
 .utils-container {

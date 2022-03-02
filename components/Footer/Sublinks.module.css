@@ -3,6 +3,9 @@
   justify-content: space-evenly;
   padding: 58px 0;
   font-weight: 600;
+}
+
+.color {
   color: var(--ufb-secondary);
 }
 
