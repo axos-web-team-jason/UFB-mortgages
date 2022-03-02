@@ -162,6 +162,9 @@
   outline: none;
   margin-top: 1.5rem;
 }
+.Home_CTAButton:hover {
+  color: var(--ufb-light);
+}
 .Home_CTAButton,
 .Home_learnMoreContainer {
   display: -moz-box;

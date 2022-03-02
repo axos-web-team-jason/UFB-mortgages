@@ -79,9 +79,7 @@ export default function TwoUpBlock({ ...data }) {
         {printLinks(links)}
         <div className={styles.Home_CTAButtonContainer}>
           <Link href="/">
-            <a href="#" className={styles.Home_CTAButton}>
-              <span>{button}</span>
-            </a>
+            <a className={styles.Home_CTAButton}>{button}</a>
           </Link>
         </div>
         <div className={styles.Home_learnMoreContainer}>
