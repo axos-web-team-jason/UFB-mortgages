@@ -3,7 +3,7 @@ import styles from "./SecondaryBlockContainer.module.css";
 
 export default function SecondaryBlockContainer({ ...data }) {
   const { blocks } = data;
-  const printBlocks = (blocks) => {
+  const printBlocks = () => {
     return blocks.map((keySecondBlock, index) => {
       return (
         <SecondaryBlock
@@ -22,7 +22,7 @@ export default function SecondaryBlockContainer({ ...data }) {
   return (
     <section>
       <div className={`${styles.secondaryBlockTest} utils-container`}>
-        {printBlocks(blocks)}
+        {printBlocks()}
       </div>
     </section>
   );

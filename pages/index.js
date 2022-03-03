@@ -18,7 +18,7 @@ Home.getLayout = function getLayout(page) {
   return (
     <NestedLayout>
       {page}
-      <Sublinks />
+      <Sublinks linksArr={pageConstants.linksArr} />
     </NestedLayout>
   );
 };

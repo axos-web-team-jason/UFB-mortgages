@@ -3,7 +3,7 @@ import styles from "./TwoUpBlockContainer.module.css";
 
 export default function TwoUpBlockContainer({ ...data }) {
   const { blocks } = data;
-  const printBlocks = (blocks) => {
+  const printBlocks = () => {
     return blocks.map((twoBlock, index) => {
       return (
         <TwoUpBlock
@@ -23,7 +23,7 @@ export default function TwoUpBlockContainer({ ...data }) {
   return (
     <section>
       <div className={`${styles.twoUpBlockTest} utils-container`}>
-        {printBlocks(blocks)}
+        {printBlocks()}
       </div>
     </section>
   );

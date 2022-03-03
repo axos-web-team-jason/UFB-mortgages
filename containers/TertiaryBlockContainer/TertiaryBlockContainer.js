@@ -3,7 +3,7 @@ import styles from "./TertiaryBlockContainer.module.css";
 
 export default function TertiaryBlockContainer({ ...data }) {
   const { blocks } = data;
-  const printBlocks = (blocks) => {
+  const printBlocks = () => {
     return blocks.map((keyBlock, index) => {
       return (
         <TertiaryBlock
@@ -22,7 +22,7 @@ export default function TertiaryBlockContainer({ ...data }) {
   return (
     <section>
       <div className={`${styles.tertiaryBlockTest} utils-container`}>
-        {printBlocks(blocks)}
+        {printBlocks()}
       </div>
     </section>
   );
