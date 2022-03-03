@@ -5,7 +5,7 @@ export default function SecondaryBlock({ ...data }) {
   const { preHeader, mainHeader, copy, linkText, buttonText, color } = data; // Props
 
   // CSS Selectors
-  const blockColor = (color) => {
+  const blockColor = () => {
     const DEFAULT_BLOCK = `${styles.primaryBlock}`;
     if (color === "primaryStyle") {
       return `${DEFAULT_BLOCK}`;
@@ -21,7 +21,7 @@ export default function SecondaryBlock({ ...data }) {
      Implement if only given two options, 3 or more then use else if
      Customizable for individual elements, just add or remove styles
   */
-  const blockOption = (color) => {
+  const blockOption = () => {
     // Object to be returned containing styles
     let compStyles = {};
 
@@ -62,12 +62,12 @@ export default function SecondaryBlock({ ...data }) {
     return compStyles;
   };
 
-  const bo = blockOption(color);
+  const bo = blockOption();
 
   /* Component rendered
      Function still allows for readability in HTML */
   return (
-    <div className={blockColor(color)}>
+    <div className={blockColor()}>
       <div className={bo.preHeaderColor}>
         <span>{preHeader}</span>
       </div>

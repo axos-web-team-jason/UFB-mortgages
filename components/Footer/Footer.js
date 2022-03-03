@@ -5,8 +5,8 @@ import pageConstants from "../../data/pageConstants";
 export default function Footer({ ...data }) {
   const { info } = data;
 
-  const printDisclosures = (info) => {
-    if (info.disclosures.length > 0) {
+  const printDisclosures = () => {
+    if (info) {
       return info.disclosures.map((key, index) => {
         return (
           <p key={key.id}>
@@ -40,7 +40,7 @@ export default function Footer({ ...data }) {
           <p>{`© ${printYear()} ${pageConstants.footer.copyright}`}</p>
           <p>{pageConstants.footer.fdic}</p>
           <p>{pageConstants.footer.nmls}</p>
-          {printDisclosures(info)}
+          {printDisclosures()}
           <div className={styles.imgContainer}>
             <Image
               loader={EHLLoader}

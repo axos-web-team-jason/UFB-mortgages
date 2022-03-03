@@ -13,7 +13,7 @@ export default function TertiaryBlock({ ...data }) {
     return selectionArr.join();
   };
 
-  const classSelector = (color, arr) => {
+  const classSelector = (arr) => {
     let parsedArr = selectorUtil(arr);
     console.log(parsedArr);
     const prefix = parsedArr[0];
@@ -26,7 +26,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const blockColor = (color) => {
+  const blockColor = () => {
     const prefix = `${styles.primaryBlock}`;
     if (color === "primaryStyle") {
       return `${prefix}`;
@@ -37,7 +37,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const preHeaderColor = (color) => {
+  const preHeaderColor = () => {
     const prefix = `${styles.preHeader}`;
     if (color === "primaryStyle" || color === "lightStyle") {
       return `${prefix}`;
@@ -46,7 +46,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const headerColor = (color) => {
+  const headerColor = () => {
     const prefix = `${styles.mainHeader}`;
     if (color === "primaryStyle" || color === "lightStyle") {
       return `${prefix}`;
@@ -55,7 +55,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const bodyColor = (color) => {
+  const bodyColor = () => {
     const prefix = `${styles.bodyWrapper}`;
     if (color === "primaryStyle" || color === "lightStyle") {
       return `${prefix}`;
@@ -64,7 +64,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const linkColor = (color) => {
+  const linkColor = () => {
     const prefix = `${styles.container} ${styles.linkContainer}`;
     if (color === "primaryStyle" || color === "lightStyle") {
       return `${prefix}`;
@@ -73,7 +73,7 @@ export default function TertiaryBlock({ ...data }) {
     }
   };
 
-  const arrowColor = (color) => {
+  const arrowColor = () => {
     const prefix = `${styles.container} ${styles.centerLinkContainer}`;
     if (color === "primaryStyle" || color === "lightStyle") {
       return `${prefix}`;
@@ -83,20 +83,20 @@ export default function TertiaryBlock({ ...data }) {
   };
 
   return (
-    <div className={blockColor(color)}>
-      <div className={preHeaderColor(color)}>
+    <div className={blockColor()}>
+      <div className={preHeaderColor()}>
         <span>{preHeader}</span>
       </div>
-      <div className={headerColor(color)}>{mainHeader}</div>
-      <div className={bodyColor(color)}>
+      <div className={headerColor()}>{mainHeader}</div>
+      <div className={bodyColor()}>
         <p>{body}</p>
       </div>
       {/* <div className={classSelector(color, arr)}>
         <p>{body}</p>
       </div> */}
-      <div className={arrowColor(color)}>
+      <div className={arrowColor()}>
         <Link href="/">
-          <a className={linkColor(color)}>{linkText}</a>
+          <a className={linkColor()}>{linkText}</a>
         </Link>
       </div>
     </div>
