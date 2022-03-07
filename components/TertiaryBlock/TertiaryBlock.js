@@ -95,7 +95,7 @@ export default function TertiaryBlock({ ...data }) {
         <p>{body}</p>
       </div> */}
       <div className={arrowColor()}>
-        <Link href="/">
+        <Link href="/" passHref>
           <a className={linkColor()}>{linkText}</a>
         </Link>
       </div>

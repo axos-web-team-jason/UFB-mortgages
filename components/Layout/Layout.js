@@ -1,12 +1,13 @@
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import mortgagesPage from "../../data/mortgagesPage";
+import Speedbump from "../Speedbump/Speedbump";
+import "../../utils/utils";
 
 export default function Layout({ children }) {
   return (
     <>
+      <Speedbump />
       <Navbar />
-      No
       <main>{children}</main>
       <Footer />
     </>

@@ -35,18 +35,21 @@ button:hover {
   --ufb-white: #ffffff;
 }
 
+/* GLOBAL PAGE CONTAINER */
 .utils-container {
   margin: 0 auto;
   max-width: 1200px;
   width: calc(100% - 3.125rem);
 }
 
+/* DEFAULT H1 */
 h1 {
   font-family: "Lora", sans-serif;
   font-size: 3em;
   font-weight: 600;
 }
 
+/* SECTION HEADERS */
 .centeredHeader {
   text-align: center;
   margin-top: 0;
@@ -54,14 +57,17 @@ h1 {
   font-weight: 600;
 }
 
+/* SECTION PADDING */
 .section {
   padding: 76px 0;
 }
 
+/* GRAY BACKGROUND */
 .grayBg {
   background-color: #60707a;
 }
 
+/* DARK TEXT COLOR */
 .darkText {
   color: var(--ufb-dark);
 }
@@ -76,7 +82,7 @@ h1 {
   }
 }
 
-/* Articles and Tools Slider */
+/* ARTICLES & TOOLS SLIDER */
 .slick-slider .slick-list,
 .slick-slider .slick-track,
 .slick-initialized .slick-slide {
@@ -143,4 +149,10 @@ h1 {
   .slick-initialized .slick-slide {
     width: calc((100% / 3) - (1.5rem * 2 / 3)) !important;
   }
+}
+
+/* VISIBILITY FOR SPEEDBUMP  */
+#speedbump.is-visible {
+  visibility: visible;
+  opacity: 1;
 }

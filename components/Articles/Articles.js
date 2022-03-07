@@ -51,7 +51,7 @@ export default function Articles() {
                       style={{ backgroundImage: `url(${article.img})` }}
                     ></div>
                     <div className={styles.infoWrapper}>
-                      <Link href={article.url}>
+                      <Link href={article.url} passHref>
                         <a className={styles.btnGradient}>{article.type}</a>
                       </Link>
                       <h3 className={styles.articleTitle}>{article.title}</h3>
