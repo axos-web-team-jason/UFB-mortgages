@@ -76,10 +76,10 @@ export default function SecondaryBlock({ ...data }) {
         <p>{copy}</p>
       </div>
       <div className={`${styles.container} ${styles.linkContainer}`}>
-        <Link href="/">
+        <Link href="/" passHref>
           <a>{linkText}</a>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <a>{linkText}</a>
         </Link>
       </div>
@@ -89,7 +89,7 @@ export default function SecondaryBlock({ ...data }) {
             <button>{buttonText}</button>
           </Link>
         </div>
-        <Link href="/">
+        <Link href="/" passHref>
           <a className={`${styles.container} ${styles.linkContainer}`}>
             {linkText}
           </a>

@@ -1,9 +1,11 @@
 import styles from "./HeroBanner.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { extLinkAppend } from "../../utils/utils"; // needed for external links
 
 export default function HeroBanner({ ...data }) {
-  const { heroBanner, img } = data;
+  const { heroBanner, img, link } = data;
+
   return (
     <div id="__next" data-reactroot="">
       <section className={`${styles.Hero_bannerHero}`}>
@@ -22,16 +24,22 @@ export default function HeroBanner({ ...data }) {
               <div
                 className={`${styles.Hero_heroBtns} ${styles.utils_flexRow} ${styles.utils_middle}`}
               >
-                <Link href="https://www.axosbank.com" passHref>
+                <Link href={link} passHref>
                   <a
-                    className={`${styles.utils_btnPrimary} ${styles.utils_mb0}`}
+                    className={`${styles.utils_btnPrimary} ${
+                      styles.utils_mb0
+                    } ${extLinkAppend(link)}`}
                     role="button"
                   >
                     {heroBanner.button}
                   </a>
                 </Link>
-                <Link href="https://www.disney.com" passHref>
-                  <a className={`${styles.utils_btnSecondary}`}>
+                <Link href="https://www.espn.com" passHref>
+                  <a
+                    className={`${styles.utils_btnSecondary} ${extLinkAppend(
+                      link
+                    )}`}
+                  >
                     {heroBanner.link}
                   </a>
                 </Link>

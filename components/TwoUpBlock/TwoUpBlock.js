@@ -42,7 +42,7 @@ export default function TwoUpBlock({ ...data }) {
           key={`${linkList} ${index}`}
           className={styles.Home_applyNowContainer}
         >
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={styles.Home_applyNowText}>{linkList}</a>
           </Link>
         </div>
@@ -78,20 +78,20 @@ export default function TwoUpBlock({ ...data }) {
         {printList(checks)}
         {printLinks(links)}
         <div className={styles.Home_CTAButtonContainer}>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={styles.Home_CTAButton}>{button}</a>
           </Link>
         </div>
         <div className={styles.Home_learnMoreContainer}>
           <div className={styles.Home_learnMoreButton}>
-            <Link href="/">
+            <Link href="/" passHref>
               <a className={styles.Home_sublink}>{sublink}</a>
             </Link>
           </div>
         </div>
       </div>
       <div className={blockOption(mainBlockBool).image}>
-        <Image src={APYbanner} width={588} height={187} priority />
+        {/* <Image src={APYbanner} width={588} height={187} priority /> */}
         {/* <Image src={img} width={588} height={187} /> */}
       </div>
     </div>

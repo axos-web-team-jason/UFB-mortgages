@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Script from "next/script";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import TwoUpBlockContainer from "../containers/TwoUpBlockContainer/TwoUpBlockContainer";
 import MainBlockContainer from "../containers/MainContentBlockContainer/MainContentBlockContainer";
@@ -18,7 +16,11 @@ export default function Mortgages() {
       <Head>
         <title>Low Interest Mortgage Options</title>
       </Head>
-      <HeroBanner heroBanner={mortgagesPage.heroBanner} img={Lucky} />
+      <HeroBanner
+        heroBanner={mortgagesPage.heroBanner}
+        img={Lucky}
+        link={mortgagesPage.heroBanner.buttonLink}
+      />
       <div className="grayBg section">
         <h1 className={`${styles.twoUpHeader} centeredHeader`}>
           {mortgagesPage.twoUpHeader}

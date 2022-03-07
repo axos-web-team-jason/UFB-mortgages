@@ -8,7 +8,7 @@ export default function Sublinks({ ...data }) {
     return linksArr.map((link, index) => {
       return (
         <div key={link.id}>
-          <Link href={link.link}>
+          <Link href={link.link} passHref>
             <a className={styles.color}>{link.page}</a>
           </Link>
         </div>

@@ -15,7 +15,6 @@ export default function TwoUpBlockContainer({ ...data }) {
           links={twoBlock.links}
           button={twoBlock.button}
           sublink={twoBlock.sublink}
-          img={twoBlock.img}
         />
       );
     });
