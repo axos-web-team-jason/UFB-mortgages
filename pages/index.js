@@ -7,27 +7,27 @@ import Layout from "../components/Layout/Layout";
 import Sublinks from "../components/Footer/Sublinks";
 import NestedLayout from "../components/Layout/NestedLayout";
 
-export async function getStaticProps() {
-  // login to contentful
+// export async function getStaticProps() {
+//   // login to contentful
 
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+//   const client = createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+//   });
 
-  const res = await client.getEntries({ content_type: "mortgages" }); // const response = get items from contentful space
-  return {
-    props: {
-      mortgages: res.items,
-    },
-  };
-}
+//   const res = await client.getEntries({ content_type: "mortgages" }); // const response = get items from contentful space
+//   return {
+//     props: {
+//       mortgages: res.items,
+//     },
+//   };
+// }
 
 export default function Home({ mortgages }) {
-  console.log(mortgages);
+  // console.log(mortgages);
   return (
     <>
-      <Mortgages mortgages={mortgages} />
+      <Mortgages />
     </>
   );
 }
