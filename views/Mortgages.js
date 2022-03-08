@@ -10,7 +10,8 @@ import mortgagesPage from "../data/mortgagesPage";
 import Lucky from "../assets/lucky-promo-LP.png";
 import styles from "./Mortgages.module.css";
 
-export default function Mortgages() {
+export default function Mortgages({ mortgages }) {
+  const { heroBannerHeader } = mortgages[0].fields;
   return (
     <section>
       <Head>
@@ -18,6 +19,7 @@ export default function Mortgages() {
       </Head>
       <HeroBanner
         heroBanner={mortgagesPage.heroBanner}
+        header={heroBannerHeader}
         img={Lucky}
         link={mortgagesPage.heroBanner.buttonLink}
       />

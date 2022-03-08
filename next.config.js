@@ -11,7 +11,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")], // SCSS/SASS options
   },
   images: {
-    domains: ["http://ufbsitecore.uat.ufbdirect.com"],
+    domains: ["images.ctfassets.net", "https://www.ufbdirect.com/"],
   },
 };
 
