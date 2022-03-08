@@ -4,7 +4,7 @@ import Image from "next/image";
 import { extLinkAppend } from "../../utils/utils"; // needed for external links
 
 export default function HeroBanner({ ...data }) {
-  const { heroBanner, img, link } = data;
+  const { heroBanner, img, link, header } = data;
 
   return (
     <div id="__next" data-reactroot="">
