@@ -17,9 +17,7 @@ export default function HeroBanner({ ...data }) {
               <div className={`${styles.Hero_superTag}`}>
                 {heroBanner.superHeader}
               </div>
-              <h1 className={`${styles.utils_mainTitle}`}>
-                {heroBanner.header}
-              </h1>
+              <h1 className={`${styles.utils_mainTitle}`}>{header}</h1>
               <p className={`${styles.utils_mb0}`}>{heroBanner.body}</p>
               <div
                 className={`${styles.Hero_heroBtns} ${styles.utils_flexRow} ${styles.utils_middle}`}
