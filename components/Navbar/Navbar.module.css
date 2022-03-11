@@ -59,6 +59,7 @@
   border-radius: 8px;
   color: var(--ufb-dark);
   font-weight: 700;
+  top: -2px;
 }
 
 .signIn:after {
@@ -159,7 +160,7 @@
 
   .mobileNavItem {
     font-size: 18px;
-    padding: 11px 32px;
+    padding: 11px 30px;
     list-style: none;
     display: flex;
     flex-direction: column;
