@@ -8,8 +8,7 @@ import Sublinks from "../components/Footer/Sublinks";
 import NestedLayout from "../components/Layout/NestedLayout";
 
 // export async function getStaticProps() {
-//   // login to contentful
-
+//   // Login to contentful using provided keys
 //   const client = createClient({
 //     space: process.env.CONTENTFUL_SPACE_ID,
 //     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -24,10 +23,11 @@ import NestedLayout from "../components/Layout/NestedLayout";
 // }
 
 export default function Home({ mortgages }) {
-  console.log(mortgages);
+  // console.log(mortgages); // pass in items to Mortgage Page component
   return (
     <>
-      <Mortgages mortgages={mortgages} />
+      {/* <Mortgages mortgages={mortgages} /> */}
+      <Mortgages />
     </>
   );
 }

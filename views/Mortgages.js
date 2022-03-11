@@ -11,14 +11,15 @@ import Lucky from "../assets/lucky-promo-LP.png";
 import styles from "./Mortgages.module.css";
 
 export default function Mortgages({ mortgages }) {
-  // const { heroBannerHeader } = mortgages[0].fields;
+  // const { heroBannerHeader } = mortgages[0].fields; // access the data fields from Contentful
   return (
     <section>
       <Head>
         <title>Low Interest Mortgage Options</title>
       </Head>
       <HeroBanner
-        heroBanner={mortgagesPage.heroBanner}
+        heroBanner={mortgagesPage.heroBanner} // from JSON
+        // header={heroBannerHeader} // from Contentful
         img={Lucky}
         link={mortgagesPage.heroBanner.buttonLink}
       />
