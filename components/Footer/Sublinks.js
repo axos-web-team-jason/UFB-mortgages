@@ -1,11 +1,10 @@
 import styles from "./Sublinks.module.css";
 import Link from "next/link";
+import pageConstants from "../../data/pageConstants.json";
 
-export default function Sublinks({ ...data }) {
-  const { linksArr } = data;
-
+export default function Sublinks() {
   const printLinks = () => {
-    return linksArr.map((link, index) => {
+    return pageConstants.linksArr.map((link, index) => {
       return (
         <div key={link.id}>
           <Link href={link.link} passHref>

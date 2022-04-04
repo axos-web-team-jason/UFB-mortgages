@@ -26,11 +26,11 @@ export default function Footer({ ...data }) {
   };
 
   const EHLLoader = () => {
-    return `https://www.ufbdirect.com/Assets/EHL-Logo.svg`;
+    return `https://www.axosbank.com/-/media/Logos/EHL-Logo-white`;
   };
 
   const FDICLoader = () => {
-    return `https://www.ufbdirect.com/Assets/FDIC-Logo.svg`;
+    return `https://www.axosbank.com/-/media/Logos/FDIC-Logo-white`;
   };
 
   return (
