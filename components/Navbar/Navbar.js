@@ -22,7 +22,7 @@ export default function Navbar() {
         <li
           key={navs}
           className={`${styles.navItem} ${
-            router.asPath === "/" ? styles.navItemActive : styles.navItem
+            router.asPath === "/" ? styles.navItem : styles.navItem
           }`}
         >
           <Link href={`/${navs}`} passHref>

@@ -34,7 +34,7 @@ export default function Home({ mortgages }) {
     <>
       {
         /* <Mortgages mortgages={mortgages} /> */ <div>
-          Home! <Mortgages />
+          <Mortgages />
         </div>
       }
     </>
