@@ -6,6 +6,7 @@ import CTA from "../components/CTA/CTA";
 import TertiaryBlockContainer from "../containers/TertiaryBlockContainer/TertiaryBlockContainer";
 import Articles from "../components/Articles/Articles";
 import SecondaryBlockContainer from "../containers/SecondaryBlockContainer/SecondaryBlockContainer";
+import MortgageLayout from "../components/Layout/MortgageLayout";
 import mortgagesPage from "../data/mortgagesPage";
 import Lucky from "../assets/lucky-promo-LP.png";
 import styles from "./Mortgages.module.css";
@@ -49,3 +50,9 @@ export default function Mortgages({ mortgages }) {
     </section>
   );
 }
+
+Mortgages.getLayout = function getLayout(page) {
+  return (
+    <MortgageLayout disclosures={mortgagesPage.footer}>{page}</MortgageLayout>
+  );
+};

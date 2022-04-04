@@ -7,9 +7,9 @@ export const extLinkAppend = (link) => {
   }
 };
 
-/* Speedbump Functionality */
-if (typeof window === "object") {
-  document.addEventListener("DOMContentLoaded", function () {
+export const speedBumpFunction = () => {
+  /* Speedbump Functionality */
+  if (typeof window === "object") {
     // variables:
     const extLinks = document.querySelectorAll(".ext-link");
     const speedbump = document.getElementById("speedbump");
@@ -47,5 +47,5 @@ if (typeof window === "object") {
       speedbump.classList.remove("is-visible");
       speedbump.blur();
     });
-  });
-}
+  }
+};

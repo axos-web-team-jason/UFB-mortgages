@@ -4,10 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import ufbLogo from "../../assets/ufb-w-logo.png";
 import profileIcon from "../../assets/user-icon.png";
+import { useRouter } from "next/router";
+import ActiveLink from "../../utils/ActiveLink";
 
 export default function Navbar() {
   const [mobileNav, setMobileNav] = useState(false);
-  const navItems = ["Savings", "Mortgages", "Support", "Personal"];
+  const navItems = ["savings", "mortgages", "support"];
+  const router = useRouter();
 
   const toggleMenu = () => {
     setMobileNav(!mobileNav);
@@ -19,11 +22,13 @@ export default function Navbar() {
         <li
           key={navs}
           className={`${styles.navItem} ${
-            index === 1 ? `${styles.navItemActive}` : ``
+            router.asPath === "/" ? styles.navItemActive : styles.navItem
           }`}
         >
-          <Link href="/" passHref>
-            <a className={`${styles.linkColor} `}>{navs}</a>
+          <Link href={`/${navs}`} passHref>
+            <a className={`${styles.linkColor} `}>
+              {navs.charAt(0).toUpperCase() + navs.slice(1)}
+            </a>
           </Link>
         </li>
       );
@@ -34,7 +39,9 @@ export default function Navbar() {
     return navItems.map((navs, index) => {
       return (
         <li key={navs} className={`${styles.mobileNavItem}`}>
-          {navs}
+          <Link href={`/${navs}`} passHref>
+            {navs}
+          </Link>
         </li>
       );
     });

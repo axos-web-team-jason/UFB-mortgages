@@ -82,6 +82,12 @@
   display: none;
 }
 
+@media screen and (max-width: 1300px) {
+  .navContainer {
+    padding: 24px 20px 18px 43px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .hide {
     visibility: hidden;

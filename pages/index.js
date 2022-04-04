@@ -2,10 +2,11 @@ import { createClient } from "contentful";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import pageConstants from "../data/pageConstants";
-import Mortgages from "../views/Mortgages";
+import Mortgages from "./mortgages";
+
 import Layout from "../components/Layout/Layout";
 import Sublinks from "../components/Footer/Sublinks";
-import NestedLayout from "../components/Layout/NestedLayout";
+import { useRouter } from "next/router";
 
 // export async function getStaticProps() {
 //   // Login to contentful using provided keys
@@ -23,20 +24,23 @@ import NestedLayout from "../components/Layout/NestedLayout";
 // }
 
 export default function Home({ mortgages }) {
+  // const router = useRouter();
+  // const {
+  //   query: { id },
+  // } = router;
   // console.log(mortgages); // pass in items to Mortgage Page component
+
   return (
     <>
-      {/* <Mortgages mortgages={mortgages} /> */}
-      <Mortgages />
+      {
+        /* <Mortgages mortgages={mortgages} /> */ <div>
+          Home! <Mortgages />
+        </div>
+      }
     </>
   );
 }
 
 Home.getLayout = function getLayout(page) {
-  return (
-    <NestedLayout>
-      {page}
-      <Sublinks linksArr={pageConstants.linksArr} />
-    </NestedLayout>
-  );
+  return <Layout>{page}</Layout>;
 };

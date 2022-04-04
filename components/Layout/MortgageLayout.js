@@ -1,11 +1,12 @@
 import Navbar from "../Navbar/Navbar";
 import Sublinks from "../Footer/Sublinks";
 import Footer from "../Footer/Footer";
+import mortgagesPage from "../../data/mortgagesPage";
 import Speedbump from "../Speedbump/Speedbump";
 import { useEffect } from "react";
 import { speedBumpFunction } from "../../utils/utils";
 
-export default function Layout({ children }) {
+export default function NestedLayout({ children, disclosures }) {
   useEffect(() => {
     speedBumpFunction();
   }, []);
@@ -15,7 +16,7 @@ export default function Layout({ children }) {
       <Navbar />
       <main>{children}</main>
       <Sublinks />
-      <Footer />
+      <Footer info={disclosures} />
     </>
   );
 }
